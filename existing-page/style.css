@@ -22,6 +22,10 @@
   );
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body {
   display: grid;
   grid-template-rows: 1fr auto;

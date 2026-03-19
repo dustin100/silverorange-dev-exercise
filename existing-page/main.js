@@ -5,10 +5,19 @@ class ModalDialog extends HTMLElement {
     this.dialog = this.querySelector('[data-modal="dialog"]');
     this.closeBtn = this.querySelector('[data-modal="close"]');
 
-    this._onTriggerClick = () => this.dialog?.showModal();
-    this._onCloseClick = () => this.dialog?.close();
+    this._onTriggerClick = () => {
+      this.dialog?.showModal();
+      document.body.classList.add("modal-open");
+    };
+    this._onCloseClick = () => {
+      this.dialog?.close();
+      document.body.classList.remove("modal-open");
+    };
     this._onBackdropClick = (e) => {
-      if (e.target === this.dialog) this.dialog.close();
+      if (e.target === this.dialog) {
+        this.dialog.close();
+        document.body.classList.remove("modal-open");
+      }
     };
 
     this.trigger?.addEventListener("click", this._onTriggerClick);
