@@ -23,6 +23,14 @@ provided in `style.css`. The implementation should use
 
 **BONUS**: add light/dark mode (according to system or user agent-level preference)
 
+### Approach
+
+**Footer and two-column layout** — I used CSS Grid on the body to keep the footer pinned to the bottom. For the two-column layout, I wrapped main and aside in a shared content class container and used css grid at larger breakpoints, with minmax values to set the minimum width for each column.
+
+**Modal** — I implemented the modal as a JS web component (`<modal-dialog>`) without the shadow DOM. I've gotten use to this pattern from working with Shopify themes, where it's common. It keeps the behavior self contained and reusable.
+
+**Light/dark mode** — I used prefers-color-scheme: dark media query to remap the three neutral color tokens. This could benefit from a toggle, but would require some JS.
+
 ## 2 - Build Out New Page
 
 Using the provided Vite application base in the `/new-page` folder, implement
