@@ -89,6 +89,7 @@ footer {
 }
 
 @media (width > 37.5em) {
+
   .section {
     display: flex;
     gap: var(--token-spacing-lg);
@@ -96,5 +97,23 @@ footer {
     .title {
       flex-shrink: 0;
     }
+  }
+}
+
+@media (width > 56em) {
+  .content {
+    display: grid;
+    grid-template-columns: minmax(500px, 1fr) minmax(300px, auto);
+    gap: var(--fluid-spacing);
+    align-content: start;
+  }
+
+  aside {
+    align-self: start;
+  }
+
+  .section {
+    flex-direction: column;
+    gap: var(--token-spacing-sm);
   }
 }
