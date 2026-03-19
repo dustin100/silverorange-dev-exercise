@@ -22,6 +22,14 @@
   );
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --token-color-neutral-dark: #e8eaed;
+    --token-color-neutral-mid: #2a2d30;
+    --token-color-neutral-light: #1a1b1c;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }
