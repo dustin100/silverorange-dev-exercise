@@ -1,0 +1,96 @@
+:root {
+  --token-font-family-system:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --token-color-neutral-dark: #2a2b2c;
+  --token-color-neutral-mid: #f0f4f8;
+  --token-color-neutral-light: white;
+  --token-color-accent-dark: #e46200;
+  --token-color-accent-mid: #fe7305;
+  --token-color-accent-light: #ffbd98;
+  --token-spacing-sm: 1rem;
+  --token-spacing-md: 2rem;
+  --token-spacing-lg: 3rem;
+  --fluid-font-size-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --fluid-font-size-1: clamp(1.35rem, 1.1352rem + 0.9545vw, 1.875rem);
+  --fluid-font-size-2: clamp(1.62rem, 1.1322rem + 2.1682vw, 2.8125rem);
+  --fluid-font-size-3: clamp(1.944rem, 1.0134rem + 4.1359vw, 4.2188rem);
+  --fluid-spacing: clamp(
+    var(--token-spacing-sm),
+    0.1818rem + 3.6364vw,
+    var(--token-spacing-lg)
+  );
+}
+
+body {
+  background-color: var(--token-color-neutral-light);
+  color: var(--token-color-neutral-dark);
+  font-family: var(--token-font-family-system);
+  font-size: var(--token-font-size-0);
+  line-height: 1.5;
+}
+
+main,
+aside,
+footer {
+  margin-block-start: var(--fluid-spacing);
+}
+
+details {
+  --stack-spacing: var(--token-spacing-sm);
+}
+
+aside {
+  --stack-spacing: var(--token-spacing-sm);
+  padding: var(--fluid-spacing);
+  border: 2px solid black;
+  background-color: var(--token-color-neutral-mid);
+}
+
+footer {
+  padding-block: var(--fluid-spacing);
+  background-color: var(--token-color-neutral-dark);
+  color: var(--token-color-neutral-light);
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack-spacing, var(--fluid-spacing));
+}
+
+.wrapper {
+  --inline-padding: var(--token-spacing-sm);
+  --max-width: 62.5rem;
+  inline-size: min(100% - (var(--inline-padding) * 2), var(--max-width));
+  margin-inline: auto;
+}
+
+.title {
+  font-family: monospace;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  &[data-size="lg"] {
+    font-size: var(--fluid-font-size-3);
+    line-height: 1;
+  }
+
+  &[data-size="md"] {
+    font-size: var(--fluid-font-size-2);
+  }
+
+  &[data-size="sm"] {
+    font-size: var(--fluid-font-size-1);
+  }
+}
+
+@media (width > 37.5em) {
+  .section {
+    display: flex;
+    gap: var(--token-spacing-lg);
+
+    .title {
+      flex-shrink: 0;
+    }
+  }
+}

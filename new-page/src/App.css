@@ -1,0 +1,11 @@
+body {
+  background-color: #f3f3f3;
+  color: #333;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+}
+
+.wrapper {
+  inline-size: min(100% - 2rem, 41.25rem);
+  margin-inline: auto;
+}
