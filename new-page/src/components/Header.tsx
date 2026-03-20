@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { SearchBar } from "./SearchBar";
+import { SearchBar } from "./EmailInput";
 import styles from "./Header.module.css";
 
 export const Header = () => {
