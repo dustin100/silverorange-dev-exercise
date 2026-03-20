@@ -1,13 +1,14 @@
+import { Logo } from "./Logo";
+import { SearchBar } from "./SearchBar";
 import styles from "./Header.module.css";
 
-interface HeaderProps {
-  children: React.ReactNode;
-}
-
-export const Header = ({ children }: HeaderProps) => {
+export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className="wrapper">{children}</div>
+      <div className={`wrapper ${styles.inner}`}>
+        <Logo />
+        <SearchBar />
+      </div>
     </header>
   );
 };
