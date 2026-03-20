@@ -1,5 +1,5 @@
 import { Logo } from "./Logo";
-import { SearchBar } from "./EmailInput";
+import { EmailInput } from "./EmailInput";
 import styles from "./Header.module.css";
 
 export const Header = () => {
@@ -7,7 +7,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={`wrapper ${styles.inner}`}>
         <Logo />
-        <SearchBar />
+        <EmailInput />
       </div>
     </header>
   );

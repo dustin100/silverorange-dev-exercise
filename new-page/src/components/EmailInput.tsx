@@ -1,6 +1,6 @@
-import styles from "./SearchBar.module.css";
+import styles from "./EmailInput.module.css";
 
-export const SearchBar = () => {
+export const EmailInput = () => {
   return (
     <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
       <input
