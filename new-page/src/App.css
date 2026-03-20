@@ -1,11 +1,12 @@
 :root {
   --color-bg: #f3f3f3;
   --color-surface: #fff;
-  --color-border: #fff;
-  --color-text: #333;
+  --color-text: #000;
   --color-text-muted: #666;
-  --color-amazon: #ff9900;
-  --color-amazon-text: #0f1111;
+  --color-amazon: #FFD463;
+  --color-grey: #EFEFEF;
+  --color-border-input: #d1d5db;
+
 
   --space-1: 0.25rem;  /* 4px */
   --space-2: 0.5rem;   /* 8px */
@@ -15,6 +16,11 @@
   --space-6: 2rem;     /* 32px */
   --space-8: 3rem;     /* 48px */
   --space-10: 4rem;    /* 64px */
+
+   /* Breakpoints for reference
+     mobile:  default
+     tablet:  @media (width >= 48rem)
+     desktop: @media (width >= 64rem) */
 }
 
 
