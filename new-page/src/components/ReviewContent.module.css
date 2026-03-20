@@ -2,6 +2,24 @@
   background-color: var(--color-surface);
 }
 
+.leftCol {
+  display: contents;
+}
+
+.rightCol {
+  display: contents;
+}
+
+.grid {
+  display: grid;
+}
+
+.titleBlock { order: 1; }
+.scoreRow   { order: 2; }
+.buyRow     { order: 3; }
+.highlights { order: 4; }
+.body       { order: 5; }
+
 /* Title */
 .titleBlock {
   padding-block-start: var(--space-6);
@@ -32,7 +50,7 @@
 }
 
 .emojiRing {
-  background-color: rgba(151, 151, 151, 0.26);
+  background-color: var(--color-grey);
   width: 134px;
   height: 134px;
   border-radius: 50%;
@@ -172,6 +190,59 @@
     padding-inline: var(--space-5);
     inline-size: min(100% - 2rem, 41.25rem);
     margin: auto;
+    overflow: visible;
   }
 
+  .grid {
+    inline-size: 100%;
+    margin-inline: 0;
+    grid-template-columns: 1fr auto;
+    column-gap: var(--space-5);
+    align-items: start;
+  }
+
+  .leftCol {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1;
+    order: unset;
+  }
+
+  .rightCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+    order: unset;
+    margin-block-start: calc(-134px / 2);
+  }
+
+  .titleBlock,
+  .scoreRow,
+  .buyRow,
+  .highlights,
+  .body {
+    order: unset;
+  }
+
+  .scoreRow {
+    margin-block-start: 0;
+    flex-direction: column;
+  }
+
+  .highlights {
+    margin-block-start: var(--space-6);
+  }
+
+  .buyRow {
+    margin-block-start: var(--space-5);
+    text-align: center;
+  }
+
+  .buyButton {
+    width: 100%;
+    justify-content: center;
+  }
 }
