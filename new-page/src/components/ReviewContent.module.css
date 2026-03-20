@@ -1,0 +1,177 @@
+.content {
+  background-color: var(--color-surface);
+}
+
+/* Title */
+.titleBlock {
+  padding-block-start: var(--space-6);
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 20px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-block-start: var(--space-1);
+}
+
+/* Score + Price row */
+.scoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  margin-block-start: var(--space-5);
+}
+
+.emojiRing {
+  background-color: rgba(151, 151, 151, 0.26);
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.emoji {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.score {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.34px;
+  justify-content: center;
+}
+
+.scoreValue {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.priceTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.priceTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.store {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Buy button */
+.buyRow {
+  text-align: center;
+  margin-block-start: var(--space-6);
+}
+
+.buyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-amazon);
+  color: var(--color-text);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.34px;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+  min-width: 210px;
+
+}
+
+.buyButton:hover {
+  filter: brightness(0.92);
+}
+
+.buyButton span {
+  align-self: flex-start;
+}
+
+.buyButton img {
+  display: block;
+  height: 1rem;
+  width: auto;
+  align-self: flex-end;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-block-start: var(--space-8);
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+
+}
+
+.highlightEmoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  aspect-ratio: 1;
+}
+
+.highlightLabel {
+  font-weight: 700;
+}
+
+/* Body */
+.body {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--color-text);
+  margin-block-start: var(--space-6);
+  padding-block-end: var(--space-6);
+}
+
+/* tablet */
+@media (width >= 48rem) {
+  .content {
+    padding-inline: var(--space-5);
+    inline-size: min(100% - 2rem, 41.25rem);
+    margin: auto;
+  }
+
+}

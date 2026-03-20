@@ -4,7 +4,7 @@ import profilePic from "../assets/profile-pic.png";
 
 const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <div className={`${styles.profile} wrapper`}>
       <img
         className={styles.avatar}
         src={profilePic}

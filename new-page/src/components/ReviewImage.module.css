@@ -4,3 +4,12 @@
   object-fit: cover;
   display: block;
 }
+
+
+/* tablet */
+@media (width >= 48rem) {
+  .image{
+    inline-size: min(100% - 2rem, 41.25rem);
+    margin: auto;
+  }
+}
