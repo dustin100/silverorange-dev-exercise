@@ -48,6 +48,14 @@ If you are comfortable with React and Typescript, you can split the page into co
 
 If you would prefer a JavaScript version of this exercise, please let us know.
 
+### Approach
+
+**Component structure** — I broke the page into reusable components without going too granular. ReviewContent is a bit bigger, but could be split into smaller individual components if needed.
+
+**Content** — I hardcoded most content to keep things simple given my limited time. Ideally, this data would live in a JSON file to simulate an API response, and stored in component state.
+
+**Figma** — Without access to the dev/inspect view, I did my best to match everything as close as possible. I think some the fonts were different to mention just one thing.
+
 ### Running and Testing the New Page
 
 ```sh
