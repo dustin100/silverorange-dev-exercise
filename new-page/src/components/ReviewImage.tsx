@@ -1,8 +1,13 @@
-
+import styles from "./ReviewImage.module.css";
+import reviewImage from "../assets/headphones-photo.jpg"
 
 const ReviewImage = () => {
   return (
-   <div> to do</div>
+    <img
+      className={styles.image}
+      src={reviewImage}
+      alt="Headphones"
+    />
   );
 };
 
